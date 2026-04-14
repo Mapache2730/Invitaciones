@@ -1,0 +1,491 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY (GLOBAL STYLE) ================= */
+body {
+  font-family: 'Great Vibes', 'Playfair Display', cursive;
+  color: #ffd700; /* amarillo dorado elegante */
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 50% 45%, rgba(69,155,104,0.35) 0%, transparent 60%),
+    linear-gradient(180deg,
+      rgba(10,43,96,0.9) 0%,
+      rgba(13,54,112,0.85) 10%,
+      rgba(13,65,116,0.8) 20%,
+      rgba(31,119,136,0.7) 35%,
+      rgba(69,155,104,0.6) 50%,
+      rgba(35,128,148,0.7) 65%,
+      rgba(17,110,98,0.8) 80%,
+      rgba(15,106,123,0.85) 90%,
+      rgba(20,120,120,0.9) 100%
+    ),
+    url("../assets/images/castle.png");
+
+  background-size: auto, auto, max(100vw,3550px) auto  ;
+  background-position: center, center, center 40%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* herencia global real */
+body, button, input, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ================= 🐸 PANTALLA INICIAL ================= */
+.frog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  /* 👇 MISMO estilo que el body pero más suave */
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,215,0,0.3) 0%, transparent 55%),
+    linear-gradient(180deg,
+      #020617 0%,
+      #0a2b60 30%,
+      #1f7788 60%,
+      #459b68 100%
+
+    );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 0.8s ease;
+}
+
+.frog-container.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================= SAPO ================= */
+.frog {
+  width: min(80vw, 300px);
+  height: auto;
+  animation: breathe 2s infinite ease-in-out;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 0 20px rgba(69,155,104,0.4)) brightness(1.05);
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.frog:active {
+  transform: scale(0.9);
+}
+
+.frog-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+
+  /* 👇 ahora sí se ve */
+  opacity: 9;
+
+  text-align: center;
+}
+
+/* ================= SALTO ================= */
+.jump {
+  animation: jump 0.6s ease forwards;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-120px); }
+  60% { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= CONTENIDO ================= */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.main-content.show {
+  opacity: 1;
+}
+
+.oculto {
+  display: none;
+}
+
+/* ================= HEADER ================= */
+.hero {
+  margin-top: 40px;
+}
+
+/* imagen principal */
+.xv-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  animation: breathe 2.5s infinite ease-in-out;
+}
+
+/* ================= SECCIONES ================= */
+section {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ================= COUNTDOWN ================= */
+.countdown-section h2 {
+  margin: 10px 0;
+}
+
+/* ================= GLOW ANIMADO ================= */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 5px rgba(255, 215, 0, 0.6),
+      0 0 10px rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.2);
+  }
+
+  50% {
+    text-shadow:
+      0 0 10px rgba(255, 215, 0, 1),
+      0 0 20px rgba(255, 215, 0, 0.8),
+      0 0 35px rgba(255, 215, 0, 0.6);
+  }
+
+  100% {
+    text-shadow:
+      0 0 5px rgba(255, 215, 0, 0.6),
+      0 0 10px rgba(255, 215, 0, 0.4),
+      0 0 20px rgba(255, 215, 0, 0.2);
+  }
+}
+
+#countdown {
+  margin-top: 15px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-align: center;
+
+  /* 👇 glow base */
+  text-shadow:
+    0 0 5px rgba(255, 215, 0, 0.8),
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.4);
+
+  /* 👇 ANIMACIÓN */
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* banner fecha */
+.date-banner {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #177a59, #4b9b86);
+  color: #ffd700;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  margin: 20px 0;
+}
+
+.date-banner .day {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.date-banner .line {
+  width: 60%;
+  height: 2px;
+  background: #ffd700;
+  margin: 8px auto;
+}
+
+.date-banner .date {
+  font-size: 32px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.date-banner .year {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ================= PADRINOS ================= */
+.intro-text {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.padrinos-title {
+  margin-top: 20px;
+}
+
+.padrinos p {
+  margin-top: 10px;
+}
+
+/* ================= TARJETAS (UNIFICADO) ================= */
+.location-card,
+.gifts,
+.dress-block {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffffff20;
+  border-radius: 20px;
+  padding: 20px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover global tarjetas */
+.location-card:hover,
+.gifts:hover,
+.dress-block:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ================= UBICACIONES ================= */
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.location-card h2 {
+  margin-bottom: 15px;
+}
+
+.location-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.location-card p {
+  margin: 15px 0;
+  opacity: 0.85;
+}
+
+/* ================= BOTONES ================= */
+.btn-location {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #c95dae, #9333ea);
+  color: white;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.btn-location:hover {
+  transform: scale(1.05);
+}
+
+.btn-location:active {
+  transform: scale(0.95);
+}
+
+/* ================= MESA DE REGALOS ================= */
+.gifts {
+  text-align: center;
+}
+
+.gift-icon {
+  width: 80px;
+  margin: 15px 0;
+}
+
+/* ================= DRESS CODE ================= */
+.dresscode {
+  text-align: center;
+}
+
+.dress-block {
+  margin-top: 25px;
+}
+
+.dress-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.dress-text {
+  line-height: 1.4;
+}
+
+/* ================= IMÁGENES HOVER GLOBAL ================= */
+.location-card img,
+.gift-icon,
+.dress-img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.location-card img:hover,
+.gift-icon:hover,
+.dress-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) saturate(1.1);
+}
+
+/* ================= COLORES ================= */
+.colors {
+  margin-top: 30px;
+}
+
+.color-circles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ffffff30;
+}
+
+/* ================= FORM ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  background-color: #22c55e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ================= TIPOGRAFÍA GLOBAL (AGREGADO) ================= */
+
+/* Tamaño base responsivo para TODO el sitio */
+html {
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+/* Jerarquía de textos */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  font-family: 'Great Vibes', cursive;
+  color: aquamarine;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.3;
+  font-family: 'Great Vibes', cursive;
+  color: rgb(57, 8, 78);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: rgb(57, 8, 78);
+  font-family: 'Great Vibes', cursive;
+  line-height: 1.3;
+}
+
+p {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  font-family: 'Playfair Display', serif;
+  color: rgb(41, 2, 41);
+}
+
+/* ================= MEJORA TEXTO "TOCA LA RANA" ================= */
+
+.frog-text {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  /* brillo tipo mágico */
+  text-shadow:
+    0 0 5px rgba(255, 215, 0, 0.8),
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* ================= HACER LA RANA MÁS GRANDE ================= */
+
+/* solo aumentamos tamaño SIN romper lo que ya tienes */
+.frog {
+  width: min(85vw, 400px);
+}
+
+/* ajuste fino en pantallas pequeñas */
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+
+  .xv-img {
+    max-width: 90%;
+  }
+
+  .dress-img {
+    max-width: 220px;
+  }
+
+  .location-card img {
+    max-width: 100%;
+  }
+
+  .date-banner {
+    padding: 15px 20px;
+  }
+
+  .frog {
+  width: min(85vw, 400px);
+}
+
+}

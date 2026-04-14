@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 🐸 PANTALLA INICIAL -->
+  <div class="frog-container" id="pantalla-inicial">
+    <img src="assets/images/frog.png" alt="sapo" class="frog" id="frog">
+    <p class="frog-text">Toca el sapo</p>
+  </div>
+
+  <!-- 🎉 CONTENIDO PRINCIPAL -->
+  <main class="main-content oculto" id="contenido">
+
+    <!-- HEADER -->
+    <header class="hero">
+     <img src="assets/images/XV1.png" alt="ImagenXV" class="xv-img">
+    </header>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+      <h2>Fecha de la celebración</h2>
+      <div class="date-banner">
+      <div class="day">SÁBADO</div>
+      <div class="line"></div>
+      <div class="date">20 de Junio</div>
+      <div class="year">2026</div>
+      </div>
+      <h2>Tiempo restante para la celebración</h2>
+      <div id="countdown"></div>
+    </section>
+
+    <!-- PADRINOS -->
+    <section class="padrinos" data-aos="fade-up">
+
+      <!-- TEXTO PRINCIPAL -->
+      <p class="intro-text">
+        “Con gran alegría y emoción, tengo el honor
+        de invitarte a la celebración de mis XV,
+        una noche especialmente creada para
+        compartir momentos únicos, agradecer cada
+        bendición recibida y celebrar la vida junto
+        a las personas que más quiero. Tu
+        presencia será parte fundamental
+        de este recuerdo que guardaré para
+        siempre en mi corazón.”
+      </p>
+
+      <!-- TÍTULO PADRINOS -->
+      <h2 class="padrinos-title">Mis padrinos</h2>
+
+      <p>Miguel A. Ramírez Balderas</p>
+      <p>Mariana Reyes Tolentino</p>
+
+    </section>
+
+    <!-- UBICACIONES -->
+    <section class="location">
+
+      <!-- IGLESIA -->
+      <div class="location-card">
+        <h2>Iglesia</h2>
+
+         <p>  
+          Parroquia de nuestra señora de la esperanza.
+        </p>
+
+        <img src="assets/images/church.png" alt="Iglesia">
+
+        <p>
+          Acompáñanos en este momento tan especial para mí, donde compartiré mi fe y agradeceré por todas las bendiciones recibidas.
+          La misa comenzará a las 6:00 PM, por lo que te recomiendo llegar con tiempo para encontrar un buen lugar y disfrutar de la ceremonia.
+        </p>
+
+        <a href="https://maps.app.goo.gl/ut2VuQLr6QX9vPQo8?g_st=aw" target="_blank" class="btn-location">
+          Ver cómo llegar
+        </a>
+      </div>
+
+      <!-- SALÓN -->
+      <div class="location-card">
+        <h2>Salón de fiestas</h2>
+
+        <p>  
+          Convenciones Bugatti.
+        </p>
+
+
+        <img src="assets/images/salon.png" alt="Salón">
+
+        <p>
+          Celebraremos juntos este gran día en un lugar increíble, con un ambiente lleno de alegría, música y diversión. La fiesta comenzará a las 7:30 PM, así que prepárate para bailar y disfrutar de una noche inolvidable.
+        </p>
+
+        <a href="https://maps.app.goo.gl/D4vzS41gFFC6jT3r7?g_st=aw" target="_blank" class="btn-location">
+          Ver cómo llegar
+        </a>
+      </div>
+
+    </section>
+
+    <!-- MESA DE REGALOS -->
+
+    <section class="gifts" data-aos="fade-up">
+
+        <h2>Mesa de regalos</h2>
+
+        <img src="assets/images/regalo.png" alt="Mesa de regalos" class="gift-icon">
+
+        <p>
+            Tu presencia es lo más importante para mí, pero si deseas tener un detalle,
+            puedes visitar mi mesa de regalos.
+        </p>
+
+        <a href="https://tumesaderegalos.com" target="_blank" class="btn-location">
+            Presiona aquí
+        </a>
+
+    </section>
+
+<!-- DRESS CODE -->
+<section class="dresscode" data-aos="fade-up">
+
+  <h2>Código de vestimenta</h2>
+
+  <!-- MUJERES -->
+  <div class="dress-block">
+    <img src="assets/images/charlotte.png" alt="Vestido formal mujer" class="dress-img">
+    <p class="dress-text">
+      <strong>Mujeres</strong><br>
+      Vestido formal o de noche
+    </p>
+  </div>
+
+  <!-- HOMBRES -->
+  <div class="dress-block">
+    <img src="assets/images/men.png" alt="Traje formal hombre" class="dress-img">
+    <p class="dress-text">
+      <strong>Hombres</strong><br>
+      Traje formal
+    </p>
+  </div>
+
+  <!-- COLORES RESERVADOS -->
+  <div class="colors">
+    <h3>Colores reservados</h3>
+
+    <div class="color-circles">
+      <span class="color" style="background:#e5ef88;"></span>
+      <span class="color" style="background:#DAE4C7;"></span>
+      <span class="color" style="background:#BDD395;"></span>
+    </div>
+  </div>
+
+</section>
+    <!-- FORMULARIO -->
+    <section class="rsvp" data-aos="fade-up">
+      <h2>Confirmar asistencia</h2>
+
+      <form>
+        <input type="text" placeholder="¿Quién va?" required>
+        <input type="number" placeholder="¿Cuántas personas?" required>
+        <textarea placeholder="Mensaje"></textarea>
+        <button type="submit">Confirmar</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script src="js/fun.js"></script>
+  <script src="js/countdown.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
