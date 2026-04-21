@@ -26,10 +26,11 @@ body {
     ),
     url("../assets/images/castle.png");
 
-  background-size: auto, auto, max(610vw,3550px) auto  ;
+  background-size: auto, auto, max(610vw,910vw) auto  ;
   background-position: center, center, center 40%;
   background-repeat: no-repeat;
   background-attachment: scroll;
+  min-height: 100dvh;
 }
 
 /* herencia global real */
@@ -44,7 +45,7 @@ body, button, input, textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100dvh;
 
   /* 👇 MISMO estilo que el body pero más suave */
   background:
@@ -120,7 +121,7 @@ body, button, input, textarea {
   align-items: center;
   text-align: center;
 
-  padding: 20px;
+  padding-bottom: 120px;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -154,6 +155,7 @@ body, button, input, textarea {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  margin-top: 50px;
 
   animation: breathe 2.5s infinite ease-in-out;
 }
@@ -535,6 +537,10 @@ p {
 
 /* ajuste fino en pantallas pequeñas */
 
+html, body {
+  overscroll-behavior: none;
+  background-color: #020617;
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 500px) {

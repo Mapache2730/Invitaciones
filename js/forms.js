@@ -13,7 +13,7 @@ document.getElementById("rsvpForm").addEventListener("submit", function(e) {
 
 Nos vemos pronto! \uD83D\uDC9A`;
 
-  const numero = "5212229278227";
+  const numero = "5212225236614";
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
