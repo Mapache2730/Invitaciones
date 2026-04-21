@@ -478,6 +478,7 @@ html {
 
 h1, h2, h3 {
   background: linear-gradient(45deg, #d4af37, #fff6b7, #d4af37);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
