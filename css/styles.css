@@ -26,7 +26,7 @@ body {
     ),
     url("../assets/images/castle.png");
 
-  background-size: auto, auto, max(100vw,3550px) auto  ;
+  background-size: auto, auto, max(610vw,3550px) auto  ;
   background-position: center, center, center 40%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -139,14 +139,73 @@ body, button, input, textarea {
 }
 
 /* imagen principal */
+/* CONTENEDOR (opcional pero recomendado para aislar el efecto) */
+.xv-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+/* TU IMAGEN */
 .xv-img {
   width: 100%;
   max-width: 500px;
   height: auto;
   display: block;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 
   animation: breathe 2.5s infinite ease-in-out;
+}
+
+/* AURA */
+.xv-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+
+  /* Color verde tipo Tiana */
+  background: radial-gradient(circle,
+    rgba(46, 204, 113, 0.6) 0%,
+    rgba(46, 204, 113, 0.3) 40%,
+    rgba(46, 204, 113, 0.1) 70%,
+    transparent 80%
+  );
+
+  filter: blur(25px);
+  pointer-events: none;
+
+  animation: auraBreathe 2.5s infinite ease-in-out;
+}
+
+/* ANIMACIÓN DE RESPIRACIÓN DE LA IMAGEN */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* ANIMACIÓN DEL AURA (SINCRONIZADA) */
+@keyframes auraBreathe {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.6;
+    filter: blur(20px);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+    filter: blur(35px);
+  }
 }
 
 /* ================= SECCIONES ================= */
@@ -191,6 +250,7 @@ section {
   letter-spacing: 3px;
   font-weight: bold;
   text-align: center;
+  color: rgb(251, 255, 3);
 
   /* 👇 glow base */
   text-shadow:
@@ -325,8 +385,10 @@ section {
 }
 
 .gift-icon {
-  width: 80px;
+  width: 250px;
   margin: 15px 0;
+  height: 250px;
+  max-width: 300px;
 }
 
 /* ================= DRESS CODE ================= */
@@ -412,24 +474,32 @@ html {
   font-size: clamp(14px, 1.5vw, 18px);
 }
 
+h1, h2, h3 {
+  background: linear-gradient(45deg, #d4af37, #fff6b7, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.7),
+    0 0 15px rgba(46, 204, 113, 0.6),
+    0 0 25px rgba(46, 204, 113, 0.4);
+}
+
 /* Jerarquía de textos */
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
   font-family: 'Great Vibes', cursive;
-  color: aquamarine;
 }
 
 h2 {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   line-height: 1.3;
   font-family: 'Great Vibes', cursive;
-  color: rgb(57, 8, 78);
 }
 
 h3 {
   font-size: clamp(1.3rem, 3vw, 1.8rem);
-  color: rgb(57, 8, 78);
   font-family: 'Great Vibes', cursive;
   line-height: 1.3;
 }
@@ -438,7 +508,8 @@ p {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   font-family: 'Playfair Display', serif;
-  color: rgb(41, 2, 41);
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 6px rgba(223, 219, 91, 0.937);
 }
 
 /* ================= MEJORA TEXTO "TOCA LA RANA" ================= */

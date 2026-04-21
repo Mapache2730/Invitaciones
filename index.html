@@ -23,10 +23,9 @@
   <!-- 🎉 CONTENIDO PRINCIPAL -->
   <main class="main-content oculto" id="contenido">
 
-    <!-- HEADER -->
-    <header class="hero">
-     <img src="assets/images/XV1.png" alt="ImagenXV" class="xv-img">
-    </header>
+<div class="xv-wrapper">
+  <img src="assets/images/XV1.png" alt="ImagenXV" class="xv-img">
+</div>
 
     <!-- COUNTDOWN -->
     <section class="countdown-section">
@@ -58,6 +57,11 @@
       </p>
 
       <!-- TÍTULO PADRINOS -->
+      <h2 class="padrinos-title">Mis padres</h2>
+
+      <p>Gehovani Reyes Tolentino</p>
+      <p>Maria de los Angeles Gomez Soto</p>
+
       <h2 class="padrinos-title">Mis padrinos</h2>
 
       <p>Miguel A. Ramírez Balderas</p>
@@ -116,14 +120,14 @@
 
         <h2>Mesa de regalos</h2>
 
-        <img src="assets/images/regalo.png" alt="Mesa de regalos" class="gift-icon">
+        <img src="assets/images/regalos.png" alt="Mesa de regalos" class="gift-icon">
 
         <p>
             Tu presencia es lo más importante para mí, pero si deseas tener un detalle,
-            puedes visitar mi mesa de regalos.
+            puedes visitar mi mesa de regalos numero #51986277 .
         </p>
 
-        <a href="https://tumesaderegalos.com" target="_blank" class="btn-location">
+        <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51986277" target="_blank" class="btn-location">
             Presiona aquí
         </a>
 
@@ -165,15 +169,15 @@
 
 </section>
     <!-- FORMULARIO -->
-    <section class="rsvp" data-aos="fade-up">
+    <section class="forms" data-aos="fade-up">
       <h2>Confirmar asistencia</h2>
 
-      <form>
-        <input type="text" placeholder="¿Quién va?" required>
-        <input type="number" placeholder="¿Cuántas personas?" required>
-        <textarea placeholder="Mensaje"></textarea>
-        <button type="submit">Confirmar</button>
-      </form>
+        <form id="rsvpForm">
+        <input type="text" id="nombre" placeholder="¿Quién nos acompañará?" required>
+        <input type="number" id="personas" placeholder="¿Cuántas personas?" required>
+        <textarea id="mensaje" placeholder="Dedica un mensaje"></textarea>
+        <button type="submit">Enviar</button>
+        </form>
 
     </section>
 
@@ -182,6 +186,7 @@
   <!-- JS -->
   <script src="js/fun.js"></script>
   <script src="js/countdown.js"></script>
+  <script src="js/forms.js"></script>
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
