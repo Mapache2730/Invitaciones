@@ -6,7 +6,7 @@
 // ── CONFIGURACIÓN ─────────────────────────────
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEZRELR9-GLL41bwzZRi_lfapbCmz8089sROm5eO86v16uLsCapbM6dpP5ryG8nxgImwI4qpe7dksC/pub?gid=0&single=true&output=csv";
 
-const WHATSAPP_NUMBER = "522229278227";
+
 
 
 // ── LEER PARÁMETRO DEL LINK ───────────────────
