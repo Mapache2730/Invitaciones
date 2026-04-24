@@ -3,7 +3,7 @@
 //  Encode correcto para emojis y caracteres especiales
 // ================================================
 
-const WHATSAPP_NUMBER = "522229278227"; // ← cambia por tu número con código de país (52 = México)
+const WHATSAPP_NUMBER = "522225236614"; // ← cambia por tu número con código de país (52 = México)
 
 document.getElementById("rsvpForm").addEventListener("submit", function (e) {
   e.preventDefault(); // evita que recargue la página
