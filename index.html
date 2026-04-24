@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="css/pases.css">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Invitación XV Años</title>
+ 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
-
+ 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
+ 
 <body>
-
-  <!-- 🐸 PANTALLA INICIAL -->
+ 
+  <!-- ===== 🐸 PANTALLA INICIAL ===== -->
   <div class="frog-container" id="pantalla-inicial">
-    <img src="assets/images/frog.png" alt="sapo" class="frog" id="frog">
+    <img
+      src="assets/images/frog.png"
+      alt="Sapo animado"
+      class="frog"
+      id="frog"
+      width="300"
+      height="300"
+    >
     <p class="frog-text">Toca el sapo</p>
   </div>
-
-  <!-- 🎉 CONTENIDO PRINCIPAL -->
+ 
+  <!-- ===== 🎉 CONTENIDO PRINCIPAL ===== -->
   <main class="main-content oculto" id="contenido">
-
-<div class="xv-wrapper">
-  <img src="assets/images/XV1.png" alt="ImagenXV" class="xv-img">
-</div>
-
-    <!-- COUNTDOWN -->
+ 
+    <!-- IMAGEN XV — ahora DENTRO del main para respetar .oculto -->
+    <header class="hero">
+      <div class="xv-wrapper">
+        <img
+          src="assets/images/XV1.png"
+          alt="XV Años"
+          class="xv-img"
+          width="500"
+          height="500"
+        >
+      </div>
+    </header>
+ 
+    <!-- ===== COUNTDOWN ===== -->
     <section class="countdown-section">
       <h2>Fecha de la celebración</h2>
+ 
       <div class="date-banner">
-      <div class="day">SÁBADO</div>
-      <div class="line"></div>
-      <div class="date">20 de Junio</div>
-      <div class="year">2026</div>
+        <div class="day">SÁBADO</div>
+        <div class="line"></div>
+        <div class="date">20 de Junio</div>
+        <div class="year">2026</div>
       </div>
+ 
       <h2>Tiempo restante para la celebración</h2>
       <div id="countdown"></div>
     </section>
-
-    <!-- PADRINOS -->
+ 
+    <!-- ===== PADRINOS ===== -->
     <section class="padrinos" data-aos="fade-up">
-
-      <!-- TEXTO PRINCIPAL -->
+ 
       <p class="intro-text">
-        “Con gran alegría y emoción, tengo el honor
+        "Con gran alegría y emoción, tengo el honor
         de invitarte a la celebración de mis XV,
         una noche especialmente creada para
         compartir momentos únicos, agradecer cada
@@ -53,146 +72,203 @@
         a las personas que más quiero. Tu
         presencia será parte fundamental
         de este recuerdo que guardaré para
-        siempre en mi corazón.”
+        siempre en mi corazón."
       </p>
-
-      <!-- TÍTULO PADRINOS -->
+ 
       <h2 class="padrinos-title">Mis padres</h2>
-
       <p>Gehovani Reyes Tolentino</p>
       <p>Maria de los Angeles Gomez Soto</p>
-
+ 
       <h2 class="padrinos-title">Mis padrinos</h2>
-
       <p>Miguel A. Ramírez Balderas</p>
       <p>Mariana Reyes Tolentino</p>
-
+ 
     </section>
-
-    <!-- UBICACIONES -->
+ 
+    <!-- ===== UBICACIONES ===== -->
     <section class="location">
-
+ 
       <!-- IGLESIA -->
-      <div class="location-card">
+      <div class="location-card" data-aos="fade-up">
         <h2>Iglesia</h2>
-
-         <p>  
-          Parroquia de nuestra señora de la esperanza.
-        </p>
-
-        <img src="assets/images/church.png" alt="Iglesia">
-
+ 
+        <p>Parroquia de nuestra señora de la esperanza.</p>
+ 
+        <img
+          src="assets/images/church.png"
+          alt="Parroquia de nuestra señora de la esperanza"
+          width="300"
+          height="300"
+        >
+ 
         <p>
-          Acompáñanos en este momento tan especial para mí, donde compartiré mi fe y agradeceré por todas las bendiciones recibidas.
-          La misa comenzará a las 6:00 PM, por lo que te recomiendo llegar con tiempo para encontrar un buen lugar y disfrutar de la ceremonia.
+          Acompáñanos en este momento tan especial para mí, donde compartiré mi fe
+          y agradeceré por todas las bendiciones recibidas.
+          La misa comenzará a las 6:00 PM, por lo que te recomiendo llegar con tiempo
+          para encontrar un buen lugar y disfrutar de la ceremonia.
         </p>
-
-        <a href="https://maps.app.goo.gl/ut2VuQLr6QX9vPQo8?g_st=aw" target="_blank" class="btn-location">
+ 
+        <a
+          href="https://maps.app.goo.gl/ut2VuQLr6QX9vPQo8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-location"
+        >
           Ver cómo llegar
         </a>
       </div>
-
+ 
       <!-- SALÓN -->
-      <div class="location-card">
+      <div class="location-card" data-aos="fade-up">
         <h2>Salón de fiestas</h2>
-
-        <p>  
-          Convenciones Bugatti.
-        </p>
-
-
-        <img src="assets/images/salon.png" alt="Salón">
-
+ 
+        <p>Convenciones Bugatti.</p>
+ 
+        <img
+          src="assets/images/salon.png"
+          alt="Salón de fiestas Convenciones Bugatti"
+          width="300"
+          height="300"
+        >
+ 
         <p>
-          Celebraremos juntos este gran día en un lugar increíble, con un ambiente lleno de alegría, música y diversión. La fiesta comenzará a las 7:30 PM, así que prepárate para bailar y disfrutar de una noche inolvidable.
+          Celebraremos juntos este gran día en un lugar increíble, con un ambiente
+          lleno de alegría, música y diversión. La fiesta comenzará a las 7:30 PM,
+          así que prepárate para bailar y disfrutar de una noche inolvidable.
         </p>
-
-        <a href="https://maps.app.goo.gl/D4vzS41gFFC6jT3r7?g_st=aw" target="_blank" class="btn-location">
+ 
+        <a
+          href="https://maps.app.goo.gl/D4vzS41gFFC6jT3r7"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-location"
+        >
           Ver cómo llegar
         </a>
       </div>
-
+ 
     </section>
-
-    <!-- MESA DE REGALOS -->
-
+ 
+    <!-- ===== MESA DE REGALOS ===== -->
     <section class="gifts" data-aos="fade-up">
-
-        <h2>Mesa de regalos</h2>
-
-        <img src="assets/images/regalos.png" alt="Mesa de regalos" class="gift-icon">
-
-        <p>
-            Tu presencia es lo más importante para mí, pero si deseas tener un detalle,
-            puedes visitar mi mesa de regalos numero #51986277 .
-        </p>
-
-        <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51986277" target="_blank" class="btn-location">
-            Presiona aquí
-        </a>
-
+ 
+      <h2>Mesa de regalos</h2>
+ 
+      <img
+        src="assets/images/regalos.png"
+        alt="Mesa de regalos Liverpool"
+        class="gift-icon"
+        width="250"
+        height="250"
+      >
+ 
+      <p>
+        Tu presencia es lo más importante para mí, pero si deseas tener un detalle,
+        puedes visitar mi mesa de regalos número&nbsp;<strong>#51986277</strong>.
+      </p>
+ 
+      <a
+        href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51986277"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-location"
+      >
+        Presiona aquí
+      </a>
+ 
     </section>
-
-<!-- DRESS CODE -->
-<section class="dresscode" data-aos="fade-up">
-
-  <h2>Código de vestimenta</h2>
-
-  <!-- MUJERES -->
-  <div class="dress-block">
-    <img src="assets/images/charlotte.png" alt="Vestido formal mujer" class="dress-img">
-    <p class="dress-text">
-      <strong>Mujeres</strong><br>
-      Vestido formal o de noche
-    </p>
-  </div>
-
-  <!-- HOMBRES -->
-  <div class="dress-block">
-    <img src="assets/images/men.png" alt="Traje formal hombre" class="dress-img">
-    <p class="dress-text">
-      <strong>Hombres</strong><br>
-      Traje formal
-    </p>
-  </div>
-
-  <!-- COLORES RESERVADOS -->
-  <div class="colors">
-    <h3>Colores reservados</h3>
-
-    <div class="color-circles">
-      <span class="color" style="background:#e5ef88;"></span>
-      <span class="color" style="background:#DAE4C7;"></span>
-      <span class="color" style="background:#BDD395;"></span>
-    </div>
-  </div>
-
-</section>
-    <!-- FORMULARIO -->
+ 
+    <!-- ===== DRESS CODE ===== -->
+    <section class="dresscode" data-aos="fade-up">
+ 
+      <h2>Código de vestimenta</h2>
+ 
+      <!-- MUJERES -->
+      <div class="dress-block">
+        <img
+          src="assets/images/charlotte.png"
+          alt="Vestido formal de noche para mujer"
+          class="dress-img"
+          width="300"
+          height="300"
+        >
+        <p class="dress-text">
+          <strong>Mujeres</strong><br>
+          Vestido formal o de noche
+        </p>
+      </div>
+ 
+      <!-- HOMBRES -->
+      <div class="dress-block">
+        <img
+          src="assets/images/men.png"
+          alt="Traje formal para hombre"
+          class="dress-img"
+          width="300"
+          height="300"
+        >
+        <p class="dress-text">
+          <strong>Hombres</strong><br>
+          Traje formal
+        </p>
+      </div>
+ 
+      <!-- COLORES RESERVADOS -->
+      <div class="colors">
+        <h3>Colores reservados</h3>
+        <div class="color-circles">
+          <span class="color" style="background:#e5ef88;" aria-label="Color amarillo claro"></span>
+          <span class="color" style="background:#DAE4C7;" aria-label="Color verde claro"></span>
+          <span class="color" style="background:#BDD395;" aria-label="Color verde medio"></span>
+        </div>
+      </div>
+ 
+    </section>
+ 
+    <!-- ===== FORMULARIO ===== -->
     <section class="forms" data-aos="fade-up">
       <h2>Confirmar asistencia</h2>
+ 
+      <form id="rsvpForm" novalidate>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="¿Quién nos acompañará?"
+          autocomplete="name"
+          required
+        >
 
-        <form id="rsvpForm">
-        <input type="text" id="nombre" placeholder="¿Quién nos acompañará?" required>
-        <input type="number" id="personas" placeholder="¿Cuántas personas?" required>
-        <textarea id="mensaje" placeholder="Dedica un mensaje"></textarea>
-        <button type="submit">Enviar</button>
-        </form>
-
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          placeholder="Dedica un mensaje"
+          rows="4"
+        ></textarea>
+ 
+        <!-- margin-bottom para que no lo tape el scroll del navegador -->
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
     </section>
-
-  </main>
-
-  <!-- JS -->
+ 
+  </main><!-- fin #contenido -->
+ 
+  <!-- ===== JS ===== -->
   <script src="js/fun.js"></script>
   <script src="js/countdown.js"></script>
   <script src="js/forms.js"></script>
-
-  <!-- AOS -->
+  <script src="js/invitados.js"></script>
+ 
+  <!-- AOS — configurado para evitar saltos en móvil -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,   /* duración de la animación en ms */
+      offset:   50,    /* px antes del elemento para activar */
+      once:     true,  /* solo anima una vez, evita saltos al volver */
+      disable:  'mobile' /* desactiva en móvil — elimina el salto de 10px */
+    });
   </script>
-
+ 
 </body>
 </html>
